@@ -1,0 +1,48 @@
+Sample Questions and Answers for RAG Chatbot
+
+Question 1: What is the main purpose of this application?
+Assistant: Based on the context provided, this application is a RAG-based Chatbot designed to use external data sources to answer questions accurately and contextually. It loads datasets, establishes a Retrieval-Augmented Generation pipeline using LangChain, and builds a chatbot that can answer user questions based on the loaded knowledge base.
+
+Question 2: What file formats can be processed by this chatbot?
+Assistant: According to the information in the document, the chatbot can process several file formats including CSV, JSON, and various document formats. In the implementation, it specifically supports CSV, PDF, and text (TXT) files as knowledge sources for the RAG system.
+
+Question 3: What is RAG in this context?
+Assistant: RAG stands for Retrieval-Augmented Generation. In this context, it's a technique that enhances language model responses by first retrieving relevant information from an external knowledge base (the uploaded documents) and then using that information to generate more accurate and contextual answers to user questions.
+
+Question 4: What are the requirements for code submission in the assignment?
+Assistant: Based on the context, the code submission requirements include:
+- Well-documented code that adheres to Python coding standards
+- Saving sample questions and chatbot responses in a .txt, .pdf, or .xlsx file
+- Pushing all code (including notebooks if using Google Colab) and relevant files to a GitHub repository
+- Sharing the GitHub repository link via email before the deadline
+
+Question 5: What bonus points are available for this assignment?
+Assistant: According to the document, bonus points are available if you deploy your Chatbot on Streamlit and provide the application link in the submission email.
+
+Question 6: What technologies are used in this implementation?
+Assistant: This implementation uses several technologies including:
+- Streamlit for the web interface
+- LangChain for the RAG pipeline components
+- FAISS for vector storage and similarity search
+- Groq API (with llama3-8b-8192 model) for text generation
+- Various document loaders for different file formats
+- Text splitters for chunking documents
+
+Question 7: How does the RAG pipeline work in this application?
+Assistant: In this application, the RAG pipeline works as follows:
+1. Documents are loaded and split into chunks
+2. The chunks are converted to embeddings and stored in a FAISS vector store
+3. When a user asks a question, the system retrieves the most relevant document chunks
+4. A prompt template combines the user question with the retrieved context
+5. The combined prompt is sent to the Groq API
+6. The API generates a response based on the question and relevant context
+7. The response is presented to the user
+
+Question 8: What is the deadline for this assignment?
+Assistant: According to the document, the deadline will be announced via email. There is no specific date mentioned in the provided context.
+
+Question 9: What should I do if I have questions about the assignment?
+Assistant: Based on the information provided, if you have questions or need guidance, you should contact the instructors at shubham@buildfastwithai.com or satvik@buildfastwithai.com.
+
+Question 10: How is error handling implemented in the Groq API calls?
+Assistant: Error handling for the Groq API calls is implemented with a robust retry mechanism. The system will attempt to call the API up to a specified number of times (default is 3), with exponential backoff between retries. If all attempts fail, it returns an error message indicating the failure.
