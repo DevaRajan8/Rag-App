@@ -60,9 +60,6 @@ This project fulfills the following tasks from the AI Intern Assignment:
 
 The code includes proper documentation, and the application allows saving chat histories for review.
 
-## Bonus Points
-
-This project is deployed on Streamlit for easy access and interaction.
 
 ## Notes
 
