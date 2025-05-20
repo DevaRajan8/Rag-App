@@ -1,0 +1,11 @@
+streamlit
+langchain
+langchain-core
+langchain-community
+faiss-cpu
+pandas
+requests
+python-dotenv
+pypdf
+numpy
+langchain-text-splitters
